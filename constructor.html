@@ -2,11 +2,34 @@
 <html>
     <head>
         <Title>Cookie Sales</Title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <main>
-            <h2>Projected Sales</h2>
-            <table id="table">
+        <h2>Projected Sales</h2>
+        <form id="form">
+            <fieldset>
+                <label for = "store_name"> Store Name: </label>
+                <input type = "text" name = "store_name" placeholder = "enter your store name" minlength = "3" required>
+            </fieldset>
+               
+            <fieldset>
+                <label for = "min_customer"> Minimum Customers: </label>
+                <input type = "text" name = "min_customer" placeholder = "least amount of customers you expect" minlength = "1" required>
+            </fieldset>
+            
+            <fieldset>
+                <label for = "max_customer"> Maximum Customers: </label>
+                <input type = "text" name = "max_customer" placeholder = "max amount of customers you expect" minlength = "1" required>
+            </fieldset>
+            
+            <fieldset>
+                <label for = "avg_customer"> Average Customers:</label>
+                <input type = "text" name = "avg_customer" placeholder = "average amount of custers" min length = "1" required> 
+            </fieldset>
+            <button id = "submit_button" type = "submit">Enter Store Info</button>
+        </form>
+        <table id="table">
                 
             
             
@@ -14,7 +37,7 @@
         
 
         
-        </main>
+    
 
         <script src="js/constructor.js"></script>
     </body>
