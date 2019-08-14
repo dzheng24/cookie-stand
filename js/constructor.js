@@ -10,7 +10,6 @@ function Store (name, minCustomer, maxCustomer, avgCustomer){
   this.maxCustomer = maxCustomer;
   this.avgCustomer = avgCustomer;
   this.sales = [];
-
   locations.push(this);
 }
 
@@ -33,7 +32,26 @@ Store.prototype.populateSales = function () {
 locations[0].populateSales();
 console.log(locations[0].sales);
 
+//Table starts here
+function render() {
+  var tableHeader = document.getElementById('table');
+  var addOnLocations = document.createElement('th');
+  addOnLocations.textContent = 'Locations';
+  tableHeader.appendChild(addOnLocations);
+  for(var i=0; i<hours.length;i++){
+    var times = document.createElement('th');
+    times.textContent = hours[i];
+    tableHeader.appendChild(times);
+  }
+  var addOnTotal = document.createElement('th');
+  addOnTotal.textContent = 'Total';
+  tableHeader.appendChild(addOnTotal);
+}
+render();
 
+Store.prototype.renderBody = function (){
+  var 
+}
 
 
 
