@@ -7,7 +7,6 @@ var tableContent = document.getElementById('table');
 var form = document.getElementById('form');
 
 var locations = [];
-var data = [];
 
 
 //constructor function
@@ -17,6 +16,7 @@ function Store (name, minCustomer, maxCustomer, avgCustomer){
   this.maxCustomer = maxCustomer;
   this.avgCustomer = avgCustomer;
   this.sales = [];
+  this.data = [];
   this.dailySales = 0;
   locations.push(this);
 }
@@ -40,7 +40,6 @@ Store.prototype.populateSales = function () {
   }
 };
 
-locations[0].populateSales();
 
 //function to capture the value of our form elements on a submit event
 //and prevent the form from refreshing
@@ -51,11 +50,13 @@ function formData (event){
   var maxCustomer = event.target.max_customer.value;
   var avgCustomer = event.target.avg_customer.value;
 
-  data.push(new Store(name, minCustomer, maxCustomer, avgCustomer));
+  new Store(name, minCustomer, maxCustomer, avgCustomer);
 
   form.reset();
+  console.log('yay we got it!');
+  activate();
 }
-console.log('history of data:', data);
+console.log('history of data:', this.data);
 
 //adding the event listener
 form.addEventListener('submit', formData);
@@ -75,7 +76,6 @@ function render() {
   addOnTotal.textContent = 'Total';
   tableHeader.appendChild(addOnTotal);
 }
-render();
 
 //building the body of the table
 Store.prototype.renderBody = function (){
@@ -92,6 +92,12 @@ Store.prototype.renderBody = function (){
   td.textContent = this.dailySales;
   tr.appendChild(td);
   tableContent.appendChild(tr);
+  //inputting the form data into the table
+  for (var d = 0; d < hours.length; d++){
+    var row = document.createElement('tr');
+    row.textContent = this.data[d];
+    tableContent.appendChild(row);
+  }
 };
 
 //finding the total sales per store
@@ -101,12 +107,30 @@ Store.prototype.dailySalesCalc = function (){
   }
 };
 
-//calling all functions
-for (var i =0 ; i < locations.length; i++){
-  locations[i].populateSales();
-  locations[i].dailySalesCalc();
-  locations[i].renderBody();
+//building a footer for the table
+function renderFooter (){
+  var footer = document.getElementById('table');
+  var total = document.createElement('td');
+  total.textContent = 'Total';
+  footer.appendChild(total);
+  for (var i = 0; i < hours.length; i++){
+    var placeHolder = document.createElement('td');
+    placeHolder.textContent = 'PH';
+    footer.appendChild(placeHolder);
+  }
 }
+
+//calling all functions
+function activate (){
+  for (var i =0 ; i < locations.length; i++){
+    locations[i].populateSales();
+    locations[i].dailySalesCalc();
+    locations[i].renderBody();
+  }
+}
+render();
+activate();
+renderFooter();
 
 
 
