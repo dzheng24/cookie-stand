@@ -46,14 +46,17 @@ Store.prototype.populateSales = function () {
 function formData (event){
   event.preventDefault();
   var name = event.target.store_name.value;
-  var minCustomer = event.target.min_customer.value;
-  var maxCustomer = event.target.max_customer.value;
-  var avgCustomer = event.target.avg_customer.value;
+  var minCustomer = parseInt(event.target.min_customer.value);
+  console.log('minCustomer', minCustomer);
+  var maxCustomer = parseInt(event.target.max_customer.value);
+  var avgCustomer = parseInt(event.target.avg_customer.value);
 
   new Store(name, minCustomer, maxCustomer, avgCustomer);
 
   form.reset();
   console.log('yay we got it!');
+  document.getElementById('table').innerHTML = '';
+  render();
   activate();
 }
 console.log('history of data:', this.data);
@@ -77,6 +80,7 @@ function render() {
   tableHeader.appendChild(addOnTotal);
 }
 
+
 //building the body of the table
 Store.prototype.renderBody = function (){
   var tr = document.createElement('tr');
@@ -92,12 +96,6 @@ Store.prototype.renderBody = function (){
   td.textContent = this.dailySales;
   tr.appendChild(td);
   tableContent.appendChild(tr);
-  //inputting the form data into the table
-  for (var d = 0; d < hours.length; d++){
-    var row = document.createElement('tr');
-    row.textContent = this.data[d];
-    tableContent.appendChild(row);
-  }
 };
 
 //finding the total sales per store
@@ -127,6 +125,7 @@ function activate (){
     locations[i].dailySalesCalc();
     locations[i].renderBody();
   }
+  renderFooter();
 }
 render();
 activate();
