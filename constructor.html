@@ -15,20 +15,21 @@
                
             <fieldset>
                 <label for = "min_customer"> Minimum Customers: </label>
-                <input type = "text" name = "min_customer" placeholder = "least amount of customers you expect" minlength = "1" required>
+                <input type = "number" name = "min_customer" placeholder = "least amount of customers you expect" min = "0" step ="1" required>
             </fieldset>
             
             <fieldset>
                 <label for = "max_customer"> Maximum Customers: </label>
-                <input type = "text" name = "max_customer" placeholder = "max amount of customers you expect" minlength = "1" required>
+                <input type = "number" name = "max_customer" placeholder = "max amount of customers you expect" min = "0" step = "1" required>
             </fieldset>
             
             <fieldset>
                 <label for = "avg_customer"> Average Customers:</label>
-                <input type = "text" name = "avg_customer" placeholder = "average amount of custers" min length = "1" required> 
+                <input type = "number" name = "avg_customer" placeholder = "average amount of customers" required> 
             </fieldset>
             <button id = "submit_button" type = "submit">Enter Store Info</button>
         </form>
+        <!--I received help on number type and "step = 1" from StackOverflow-->
         <table id="table">
                 
             
