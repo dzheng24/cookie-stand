@@ -58,6 +58,7 @@ function formData (event){
   document.getElementById('table').innerHTML = '';
   render();
   activate();
+  renderFooter();
 }
 console.log('history of data:', this.data);
 
@@ -125,7 +126,6 @@ function activate (){
     locations[i].dailySalesCalc();
     locations[i].renderBody();
   }
-  renderFooter();
 }
 render();
 activate();
