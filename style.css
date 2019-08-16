@@ -1,0 +1,71 @@
+/**{
+    outline: dotted 1px orange;
+}*/
+
+body{
+    background-color:#807863;
+}
+
+#page{
+    max-width: 950px;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+    border: 4px double #000;
+}
+
+header{  
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 70px;
+}
+
+#logo{
+    width: 500px;
+}
+
+.nav{
+    border-bottom: 1px solid #000;
+    border-top: 2px solid #000;
+    font-family: 'Josefin Sans';
+    padding: 15px;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    width: 600px;
+}
+
+.nav li{
+    display: inline;
+    margin: 0px 3px;
+}
+
+#welcome{
+    font-family: lobster;
+    font-size: 44px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#family{
+    margin:10px 0px 10px 0px;
+}
+
+#intro{
+    border-bottom: 1px solid #000;
+    font-family: Patua One;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+section{
+    text-align: center;
+}
+
+.together{
+    display:inline-block;
+    margin: 0px;
+}
