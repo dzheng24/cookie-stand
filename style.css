@@ -10,7 +10,7 @@ body{
     max-width: 950px;
     margin: 10px auto 10px auto;
     padding: 20px;
-    border: 4px double #000;
+    border: 4px double #FFAF94;
 }
 
 header{  
@@ -27,8 +27,8 @@ h1 {
 }
 
 .nav{
-    border-bottom: 1px solid #000;
-    border-top: 2px solid #000;
+    border-bottom: 1px solid #B36D56;
+    border-top: 2px solid #B36D56;
     font-family: 'Josefin Sans';
     padding: 15px;
     margin: 0px auto 0px auto;
@@ -54,7 +54,7 @@ h1 {
 }
 
 #intro{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #B36D56;
     font-family: Patua One;
     font-size: 28px;
     margin-bottom: 20px;
@@ -68,4 +68,37 @@ section{
 .together{
     display:inline-block;
     margin: 0px;
+}
+
+h2{
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+
+}
+
+.locations{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.locations ul li{
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+}
+
+table{
+    border: 1px solid black;
+    margin-top: 20px;
+    width: 90%
+}
+
+th{
+    border: 1px solid black;
+    font-size: 24px;
+    text-align: left;
+}
+
+td{
+    border: 1px solid black;
+    font-size: 18px;
 }
