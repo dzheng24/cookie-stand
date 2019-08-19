@@ -67,7 +67,173 @@ section{
 
 .together{
     display:inline-block;
-    margin: 0px;
+    height: 300px;
+    width: 300px;
+}
+
+#drawing{
+    display: inline-block;
+    height:300px;
+    position: relative;
+    opacity: 0.5;
+    transition: 350ms all;
+    width: 300px;
+}
+
+#drawing:hover{
+    opacity: 1;
+}
+
+#drawing span{
+    box-sizing: border-box;
+    background-color:salmon;
+    bottom: 0;
+    color: dark gray;
+    display: block;
+    font-family:'Amatic SC';
+    font-size: 25px;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+#drawing:hover span{
+    opacity: .8;
+}
+
+#first_cookie{
+    display: inline-block;
+    height:300px;
+    position: relative;
+    opacity: 0.5;
+    transition: 350ms all;
+    width: 300px;
+}
+
+#first_cookie:hover{
+    opacity: 1;
+}
+
+#first_cookie span{
+    box-sizing: border-box;
+    background-color:salmon;
+    bottom: 0;
+    color: dark gray;
+    display: block;
+    font-family:'Amatic SC';
+    font-size: 25px;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+#first_cookie:hover span{
+    opacity: .8;
+}
+
+#t_shirt{
+    display: inline-block;
+    height:300px;
+    position: relative;
+    opacity: 0.5;
+    transition: 350ms all;
+    width: 300px;
+}
+
+#t_shirt:hover{
+    opacity: 1;
+}
+
+#t_shirt span{
+    box-sizing: border-box;
+    background-color:salmon;
+    bottom: 0;
+    color: dark gray;
+    display: block;
+    font-family:'Amatic SC';
+    font-size: 25px;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+#t_shirt:hover span{
+    opacity: .8;
+}
+
+#fish{
+    display: inline-block;
+    height:300px;
+    position: relative;
+    opacity: 0.5;
+    transition: 350ms all;
+    width: 300px;
+}
+
+#fish:hover{
+    opacity: 1;
+}
+
+#fish span{
+    box-sizing: border-box;
+    background-color:salmon;
+    bottom: 0;
+    color: dark gray;
+    display: block;
+    font-family:'Amatic SC';
+    font-size: 25px;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+#fish:hover span{
+    opacity: .8;
+}
+
+#cutter{
+    display: inline-block;
+    height:300px;
+    position: relative;
+    opacity: 0.5;
+    transition: 350ms all;
+    width: 300px;
+}
+
+#cutter:hover{
+    opacity: 1;
+}
+
+#cutter span{
+    box-sizing: border-box;
+    background-color:salmon;
+    bottom: 0;
+    color: dark gray;
+    display: block;
+    font-family:'Amatic SC';
+    font-size: 25px;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+#cutter:hover span{
+    opacity: .8;
 }
 
 h2{
@@ -86,19 +252,55 @@ h2{
     font-size: 18px;
 }
 
-table{
-    border: 1px solid black;
+footer{
+    background: teal;
     margin-top: 20px;
-    width: 90%
 }
+
+table{
+    background: lightgray;
+    border: 1px solid black;
+    margin: 20px auto;
+    width: 100%;
+}
+
 
 th{
     border: 1px solid black;
     font-size: 24px;
-    text-align: left;
+    text-align: center;
 }
 
 td{
     border: 1px solid black;
     font-size: 18px;
+}
+
+.sale_body{
+    text-align: center;
+}
+
+.sale_body h1{
+    color: salmon;
+    background: darkblue;
+    display: inline-block;
+    margin: auto;
+    width: 800px;
+}
+
+.sale_body a{
+    display: inline-block;
+    text-align: center;
+}
+
+form{
+    background: lightgray;
+    margin: auto;
+    width: 800px;
+}
+
+.sale_body footer{
+    background: salmon;
+    width: 100px;
+    margin: 30px auto;
 }

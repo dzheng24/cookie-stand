@@ -1,13 +1,14 @@
 'use strict';
 
 //global declarations
-var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
 var tableContent = document.getElementById('table');
 var form = document.getElementById('form');
 
 var locations = [];
-
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
+var hourlyTotalArray = [];
+var grandTotal = 0;
 
 //constructor function
 function Store (name, minCustomer, maxCustomer, avgCustomer){
@@ -56,11 +57,12 @@ function formData (event){
   form.reset();
   console.log('yay we got it!');
   document.getElementById('table').innerHTML = '';
+  hourlyTotalArray = [];
+  grandTotal = 0;
   render();
   activate();
   renderFooter();
 }
-console.log('history of data:', this.data);
 
 //adding the event listener
 form.addEventListener('submit', formData);
@@ -106,17 +108,45 @@ Store.prototype.dailySalesCalc = function (){
   }
 };
 
+//finding the hourly totals
+function calcHourlyTotal(){
+  for (var i = 0; i < hours.length; i++){
+    var hourlyTotal = 0;
+
+    for (var x = 0; x < locations.length; x++){
+      hourlyTotal += locations[x].sales[i];
+    }
+
+    hourlyTotalArray.push(hourlyTotal);
+  }
+
+  calcGrandTotal();
+}
+
+function calcGrandTotal(){
+  for (var i = 0; i < hourlyTotalArray.length; i++){
+    grandTotal += hourlyTotalArray[i];
+  }
+}
+
+
 //building a footer for the table
 function renderFooter (){
-  var footer = document.getElementById('table');
+  //var footer = document.getElementById('table');
+  var trEl = document.createElement('tr');
   var total = document.createElement('td');
   total.textContent = 'Total';
-  footer.appendChild(total);
+  trEl.appendChild(total);
+  calcHourlyTotal();
   for (var i = 0; i < hours.length; i++){
-    var placeHolder = document.createElement('td');
-    placeHolder.textContent = 'PH';
-    footer.appendChild(placeHolder);
+    var hourlyTotalValue = document.createElement('td');
+    hourlyTotalValue.textContent = hourlyTotalArray[i];
+    trEl.appendChild(hourlyTotalValue);
   }
+  var tdEl = document.createElement('td');
+  tdEl.textContent = grandTotal;
+  trEl.appendChild(tdEl);
+  tableContent.appendChild(trEl);
 }
 
 //calling all functions
