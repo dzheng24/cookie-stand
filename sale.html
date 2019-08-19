@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Cookie Sales</Title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class = "sale_body">
+        <h1>Projected Sales</h1>
+        <form id="form">
+            <fieldset>
+                <label for = "store_name"> Store Name: </label>
+                <input type = "text" name = "store_name" placeholder = "enter your store name" minlength = "3" required>
+            </fieldset>
+               
+            <fieldset>
+                <label for = "min_customer"> Minimum Customers: </label>
+                <input type = "number" name = "min_customer" placeholder = "least amount of customers you expect" min = "0" step ="1" required>
+            </fieldset>
+            
+            <fieldset>
+                <label for = "max_customer"> Maximum Customers: </label>
+                <input type = "number" name = "max_customer" placeholder = "max amount of customers you expect" min = "0" step = "1" required>
+            </fieldset>
+            
+            <fieldset>
+                <label for = "avg_customer"> Average Customers:</label>
+                <input type = "number" name = "avg_customer" placeholder = "average amount of customers" required> 
+            </fieldset>
+            <button id = "submit_button" type = "submit">Enter Store Info</button>
+        </form>
+        <!--I received help on number type and "step = 1" from StackOverflow-->
+        <table id="table">
+        </table>
+
+                
+        <script src="js/constructor.js"></script>
+        
+        <footer>
+            <a href = "index.html">Home Page</a>
+        </footer>
+
+    </body>
+</html>

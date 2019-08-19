@@ -1,0 +1,306 @@
+/**{
+    outline: dotted 1px orange;
+}*/
+
+body{
+    background-color:#807863;
+}
+
+#page{
+    max-width: 950px;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+    border: 4px double #FFAF94;
+}
+
+header{  
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 70px;
+}
+
+#logo{
+    width: 500px;
+}
+
+.nav{
+    border-bottom: 1px solid #B36D56;
+    border-top: 2px solid #B36D56;
+    font-family: 'Josefin Sans';
+    padding: 15px;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    width: 600px;
+}
+
+.nav li{
+    display: inline;
+    margin: 0px 3px;
+}
+
+#welcome{
+    font-family: lobster;
+    font-size: 44px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#family{
+    margin:10px 0px 10px 0px;
+}
+
+#intro{
+    border-bottom: 1px solid #B36D56;
+    font-family: Patua One;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+section{
+    text-align: center;
+}
+
+.together{
+    display:inline-block;
+    height: 300px;
+    width: 300px;
+}
+
+#drawing{
+    display: inline-block;
+    height:300px;
+    position: relative;
+    opacity: 0.5;
+    transition: 350ms all;
+    width: 300px;
+}
+
+#drawing:hover{
+    opacity: 1;
+}
+
+#drawing span{
+    box-sizing: border-box;
+    background-color:salmon;
+    bottom: 0;
+    color: dark gray;
+    display: block;
+    font-family:'Amatic SC';
+    font-size: 25px;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+#drawing:hover span{
+    opacity: .8;
+}
+
+#first_cookie{
+    display: inline-block;
+    height:300px;
+    position: relative;
+    opacity: 0.5;
+    transition: 350ms all;
+    width: 300px;
+}
+
+#first_cookie:hover{
+    opacity: 1;
+}
+
+#first_cookie span{
+    box-sizing: border-box;
+    background-color:salmon;
+    bottom: 0;
+    color: dark gray;
+    display: block;
+    font-family:'Amatic SC';
+    font-size: 25px;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+#first_cookie:hover span{
+    opacity: .8;
+}
+
+#t_shirt{
+    display: inline-block;
+    height:300px;
+    position: relative;
+    opacity: 0.5;
+    transition: 350ms all;
+    width: 300px;
+}
+
+#t_shirt:hover{
+    opacity: 1;
+}
+
+#t_shirt span{
+    box-sizing: border-box;
+    background-color:salmon;
+    bottom: 0;
+    color: dark gray;
+    display: block;
+    font-family:'Amatic SC';
+    font-size: 25px;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+#t_shirt:hover span{
+    opacity: .8;
+}
+
+#fish{
+    display: inline-block;
+    height:300px;
+    position: relative;
+    opacity: 0.5;
+    transition: 350ms all;
+    width: 300px;
+}
+
+#fish:hover{
+    opacity: 1;
+}
+
+#fish span{
+    box-sizing: border-box;
+    background-color:salmon;
+    bottom: 0;
+    color: dark gray;
+    display: block;
+    font-family:'Amatic SC';
+    font-size: 25px;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+#fish:hover span{
+    opacity: .8;
+}
+
+#cutter{
+    display: inline-block;
+    height:300px;
+    position: relative;
+    opacity: 0.5;
+    transition: 350ms all;
+    width: 300px;
+}
+
+#cutter:hover{
+    opacity: 1;
+}
+
+#cutter span{
+    box-sizing: border-box;
+    background-color:salmon;
+    bottom: 0;
+    color: dark gray;
+    display: block;
+    font-family:'Amatic SC';
+    font-size: 25px;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+#cutter:hover span{
+    opacity: .8;
+}
+
+h2{
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+
+}
+
+.locations{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.locations ul li{
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+}
+
+footer{
+    background: teal;
+    margin-top: 20px;
+}
+
+table{
+    background: lightgray;
+    border: 1px solid black;
+    margin: 20px auto;
+    width: 100%;
+}
+
+
+th{
+    border: 1px solid black;
+    font-size: 24px;
+    text-align: center;
+}
+
+td{
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+.sale_body{
+    text-align: center;
+}
+
+.sale_body h1{
+    color: salmon;
+    background: darkblue;
+    display: inline-block;
+    margin: auto;
+    width: 800px;
+}
+
+.sale_body a{
+    display: inline-block;
+    text-align: center;
+}
+
+form{
+    background: lightgray;
+    margin: auto;
+    width: 800px;
+}
+
+.sale_body footer{
+    background: salmon;
+    width: 100px;
+    margin: 30px auto;
+}
